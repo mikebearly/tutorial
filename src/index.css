@@ -20,6 +20,7 @@ h1 {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
+  align-items: start;
 }
 
 .book {
@@ -37,4 +38,8 @@ h1 {
   font-size: 0.75rem;
   margin-top: 0.25rem;
   letter-spacing: 5px;
+}
+
+.book p {
+  margin-top: 0.5 rem;
 }
