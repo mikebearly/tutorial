@@ -37,7 +37,8 @@ function BookList() {
 }
 
 const Book = ({ img, title, author }) => {
-  const clickHandler = () => {
+  const clickHandler = (e) => {
+    console.log(e.target);
     alert("Hello World");
   };
 
@@ -46,7 +47,12 @@ const Book = ({ img, title, author }) => {
   };
 
   return (
-    <article className="book">
+    <article
+      className="book"
+      onMouseOver={() => {
+        console.log(title);
+      }}
+    >
       <img src={img} alt="" />
       <h1
         onClick={() => {
