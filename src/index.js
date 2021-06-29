@@ -16,7 +16,7 @@ const books = [
     id: 2,
     img: "https://m.media-amazon.com/images/I/81hyid7dI5L._AC_UY218_.jpg",
     title: "1001 Activities Book",
-    author: "Dreamland Publications",
+    author: "Hollywood Books",
   },
   {
     id: 3,
@@ -40,6 +40,11 @@ const Book = ({ img, title, author }) => {
   const clickHandler = () => {
     alert("Hello World");
   };
+
+  const complexExample = (authorInput) => {
+    console.log(authorInput);
+  };
+
   return (
     <article className="book">
       <img src={img} alt="" />
@@ -53,6 +58,9 @@ const Book = ({ img, title, author }) => {
       <h4>{author}</h4>
       <button type="button" onClick={clickHandler}>
         reference example
+      </button>
+      <button type="button" onClick={() => complexExample(author)}>
+        More complex example
       </button>
     </article>
   );
